@@ -3,7 +3,7 @@
 }
 
 p {
-  font-size: 22px;
+  font-size: 28px;
 }
 @media (max-width: 500px) {
   p {
@@ -12,7 +12,7 @@ p {
 }
 
 strong {
-  font-size: 26px;
+  font-size: 30px;
 }
 @media (max-width: 500px) {
   strong {
@@ -28,5 +28,14 @@ button {
   button {
     height: 40px;
     width: 180px;
+  }
+}
+
+#home {
+  min-height: 100vh;
+}
+@media (max-width: 500px) {
+  #home {
+    min-height: 75vh;
   }
 }
