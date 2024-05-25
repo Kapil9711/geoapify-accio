@@ -4,9 +4,7 @@ async function displayData(element, type, data) {
       type,
       data
     );
-    console.log(await getTimeZone(type, data));
-    console.log(timezone, country, city, postcode, lat, lon);
-    const container = `<div class="container my-4 pt-4 pb-5 px-3 border border-2 ${
+    const container = `<div class="container my-5 my-md-4 pt-4 pb-5 px-3 border border-2 ${
       type === "text" ? "border-secondary" : "border-dark"
     } ">
   <p>Name Of Time Zone : <strong class="name">${timezone.name}</strong></p>
