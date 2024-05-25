@@ -10,13 +10,17 @@
   </head>
   <body>
     <main>
-      <section style="min-height: 100vh" id="home">
+      <section style="min-height: 100vh; position: relative" id="home">
         <div class="home-container container py-5 px-3">
           <header>
             <h1 class="fw-bolder">TIME ZONE API</h1>
             <h1 class="fw-bolder mt-4 mt-md-3">Your Current Time Zone</h1>
           </header>
-          <div class="home-box"></div>
+          <div class="home-box">
+            <h2 class="loading" style="position: absolute; top: 45%">
+              Please wait, Getting info......
+            </h2>
+          </div>
         </div>
       </section>
       <section id="result" class="text-bg-dark">
@@ -28,7 +32,13 @@
               type="text"
               class="form-control border border-1 border-secondary"
             />
-            <button id="submit-btn" class="">submit</button>
+            <button
+              style="border-radius: 0"
+              id="submit-btn"
+              class="btn btn-light"
+            >
+              submit
+            </button>
             <p style="font-size: 12px" class="error text-danger">
               Please enter an adress!
             </p>

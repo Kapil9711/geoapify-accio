@@ -31,10 +31,10 @@
 const homeBox = document.querySelector(".home-box");
 const resultBox = document.querySelector(".result-box");
 const resultContainer = document.querySelector(".result-container");
-
 const input = document.querySelector("#input");
 const submitBtn = document.querySelector("#submit-btn");
 const error = document.querySelector(".error");
+const loading = document.querySelector(".loading");
 
 resultContainer.style.display = "none";
 error.style.display = "none";
