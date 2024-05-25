@@ -1,8 +1,13 @@
 async function displayData(element, type, data) {
   try {
     const timeZoneData = await getTimeZone(type, data);
-    if (type === "position" && !timeZoneData)
+    if (type === "position" && !timeZoneData) {
       return (loading.textContent = "Unable to get location");
+    }
+    if (type === "text" && !timeZoneData)
+      return (element.innerHTML =
+        '<div class="d-flex justify-content-center align-items-center" style="height: 400px;"> <h2> Time Zone not found </h2> </div>');
+
     const { timezone, country, city, postcode, lat, lon } = timeZoneData;
     const container = `<div class="container my-5 my-md-4 pt-4 pb-5 px-3 border border-2 ${
       type === "text" ? "border-secondary" : "border-dark"
